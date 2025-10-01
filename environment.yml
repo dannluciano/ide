@@ -14,5 +14,6 @@ dependencies:
   - pillow
   - ipywidgets
   - jupyterlite-ai
+  - jupyterlite-core[translation]
   - pip:
       - ipycanvas
