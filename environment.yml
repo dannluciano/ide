@@ -8,7 +8,7 @@ dependencies:
   - xeus-lua
   - xeus-cpp
   - xeus-lua
-  - xeus-sql
+  - xeus-sqlite
   - numpy
   - matplotlib
   - pillow
