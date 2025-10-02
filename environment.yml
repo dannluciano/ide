@@ -15,7 +15,8 @@ dependencies:
   - ipywidgets
   - jupyterlite-ai
   - jupyterlite-core[translation]
-  - jupyterlab-language-pack-pt-BR
   - jupyterlite-javascript-kernel
+  - jupyterlite-ruby-kernel
+  # - jupyterlab-language-pack-pt-BR
   - pip:
       - ipycanvas
