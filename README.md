@@ -1,13 +1,15 @@
-# Jupyterlite pour les CPGE
+# Jupyterlite
 
-Une instance Jupyterlite avec tout ce qu'il faut pour programmer au lycée et en CPGE :
+```sh
+pixi run build
+```
 
 - Python
 - Javascript
 - C
-- Ocaml
+- C++
 - SQL
 
-- Et un émulateur de terminal 
+- Emulador de Terminal
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://davy39.github.io/ide/lab/index.html)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://dannluciano.github.io/ide/lab/index.html)

@@ -1,9 +1,9 @@
 {
-  "jupyter-lite-schema-version": 0,
-  "jupyter-config-data": {
-    "appName": "Jupyter", 
-    "htmlTitle": "Jupyter", 
-    "disabledExtensions": ["@jupyterlab/application-extension:logo"], 
-    "terminalsAvailable": true
-  }
+	"jupyter-lite-schema-version": 0,
+	"jupyter-config-data": {
+		"appName": "Jupyter",
+		"htmlTitle": "Jupyter",
+		"terminalsAvailable": true,
+		"disabledExtensions": ["@jupyterlab/application-extension:logo"]
+	}
 }

@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "Jupyterlite"
 version = "0.1.0"
 description = "Setup a pixi environment for building a jupyterlite app with WASM"
@@ -18,16 +18,13 @@ dependencies = {xeus-sqlite = "*"}
 [feature.javascript]
 platforms = ["emscripten-wasm32"]
 dependencies = {xeus-javascript = "*"}
-[feature.ocaml]
-platforms = ["emscripten-wasm32"]
-dependencies = {xeus-ocaml = "*"}
 
 
 [feature.host]
 platforms = ["linux-64"]
 [feature.host.dependencies]
 xeus = ">=5.2.4"
-jupyterlab-language-pack-fr-FR = "*"
+jupyterlab-language-pack-pt-BR = "*"
 jupyterlite-xeus = ">=4.2.2"
 #jupyterlite-pyodide-kernel = "*"
 jupyterlite-terminal ="*"
@@ -45,8 +42,7 @@ pixi install \
 -e c \
 -e python \
 -e sql \
--e javascript \
--e ocaml
+-e javascript 
 """}
 
 rename = "python scripts/rename.py"
@@ -56,8 +52,7 @@ jupyter lite build \
 --XeusAddon.prefix=.pixi/envs/c \
 --XeusAddon.prefix=.pixi/envs/python \
 --XeusAddon.prefix=.pixi/envs/sql \
---XeusAddon.prefix=.pixi/envs/javascript \
---XeusAddon.prefix=.pixi/envs/ocaml
+--XeusAddon.prefix=.pixi/envs/javascript
 
 
 """, depends-on = ["setup_kernel", "rename"] }
@@ -70,4 +65,3 @@ c = ["cpp"]
 python = ["python"]
 sql = ["sqlite"]
 javascript = ["javascript"]
-ocaml = ["ocaml"]

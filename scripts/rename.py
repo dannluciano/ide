@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 import json
-from pathlib import Path
 import shutil  # Imported for directory removal functions
-
+from pathlib import Path
 
 # List of kernel directories to be deleted
-kernels_to_delete = ["xcpp17", "xcpp20", "xcpp23", "xc11", "xc17"]
+kernels_to_delete = ["xcpp17", "xcpp20", "xc11", "xc17"]
 
 print("--- Deleting Unwanted Kernel Directories ---")
 for kernel_name in kernels_to_delete:
@@ -20,20 +19,27 @@ print("--- Deletion Complete ---\n")
 
 # Original script logic to update remaining kernels
 print("--- Updating Display Names for Remaining Kernels ---")
-kernels_to_update = [ ("Python","xpython"), 
-                      ("OCaml","xocaml"), 
-                      ("SQL","xsqlite"), 
-                      ("C","xc23"), 
-                      ("JavaScript","xjavascript")]
+kernels_to_update = [
+    ("Python", "xpython"),
+    ("SQL", "xsqlite"),
+    ("C", "xc23"),
+    ("C", "xcpp23"),
+    ("JavaScript", "xjavascript"),
+]
 
 for display_name, kernel in kernels_to_update:
-    kernel_json = Path(f".pixi/envs/{display_name.lower()}/share/jupyter/kernels/{kernel}/kernel.json")
-    
+    kernel_json = Path(
+        f".pixi/envs/{display_name.lower()}/share/jupyter/kernels/{kernel}/kernel.json"
+    )
+
     # Check if the kernel.json file exists before trying to modify it
     if kernel_json.exists():
         try:
+            if kernel.startswith("xcpp"):
+                display_name = "C++"
             data = json.loads(kernel_json.read_text())
             data["display_name"] = display_name
+
             kernel_json.write_text(json.dumps(data, indent=2))
             print(f"Updated display name for '{kernel}' to '{display_name}'")
         except Exception as e:
