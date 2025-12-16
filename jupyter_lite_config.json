@@ -3,7 +3,7 @@
 		"contents": ["notebooks"],
 		"output_dir": "dist"
 	},
-  	"xeus": {
+  	"jupyterlite-xeus": {
     	"default_channels": ["conda-forge"]
   	}
 }
