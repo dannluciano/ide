@@ -1,9 +1,9 @@
 {
-	"LiteBuildConfig": {
-		"contents": ["notebooks"],
-		"output_dir": "dist"
-	},
-  	"jupyterlite-xeus": {
-    	"default_channels": ["conda-forge"]
-  	}
+  "LiteBuildConfig": {
+    "contents": ["notebooks"],
+    "output_dir": "dist"
+  },
+  "xeus": {
+    "default_channels": ["conda-forge"]
+  }
 }
