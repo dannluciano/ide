@@ -23,10 +23,10 @@ dependencies = {xeus-javascript = "*"}
 [feature.host]
 platforms = ["linux-64"]
 [feature.host.dependencies]
-xeus = ">=5.2.4"
+xeus = "*"
 jupyterlab-language-pack-pt-BR = "*"
-jupyterlite-xeus = ">=4.2.2"
-#jupyterlite-pyodide-kernel = "*"
+jupyterlite-xeus = "*"
+# jupyterlite-pyodide-kernel = "*"
 jupyterlite-terminal ="*"
 jupyterlab-myst = "*"
 jupyter_server = "*"
